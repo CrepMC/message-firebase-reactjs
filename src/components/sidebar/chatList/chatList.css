@@ -1,0 +1,27 @@
+.itemList {
+  overflow: auto;
+}
+.item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid rgba(200, 200, 200, 0.25);
+  padding: 12px 0;
+
+  img {
+    width: 50px;
+    border-radius: 50%;
+  }
+
+  .texts {
+    span {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    p {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.8);
+    }
+  }
+}

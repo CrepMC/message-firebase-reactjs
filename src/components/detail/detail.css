@@ -1,0 +1,115 @@
+.detail {
+  flex: 1;
+  padding: 12px;
+
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+
+  .user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid var(--border-color);
+
+    img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+  }
+
+  .info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 12px;
+
+    .option {
+      .title {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px 0;
+
+        img {
+          width: 12px;
+          object-fit: contain;
+        }
+      }
+      .photos {
+        margin-top: 8px;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 4px;
+        .photo {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .photoDetail {
+            .img {
+              position: relative;
+              width: 100%;
+              object-fit: cover;
+              aspect-ratio: 1 / 1;
+            }
+            .downloadBtn {
+              position: absolute;
+              width: 16px;
+              bottom: 8px;
+              right: 4px;
+              transition: 0.15s;
+              &:hover {
+                cursor: pointer;
+                transform: translateY(-2px);
+              }
+            }
+            span {
+              font-size: 12px;
+              color: rgba(255, 255, 255, 0.8);
+            }
+          }
+        }
+      }
+    }
+
+    .btn {
+      margin-top: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      button {
+        padding: 8px 0;
+        outline: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: 500;
+        transition: 0.15s;
+
+        &#blockBtn {
+          background-color: rgba(0, 0, 0, 0.25);
+          border: 1px solid rgb(155, 0, 0);
+          color: #c40000;
+          &:hover {
+            background-color: rgba(162, 23, 23, 0.801);
+            color: #ffffff;
+          }
+        }
+
+        &#logoutBtn {
+          background-color: rgba(184, 20, 20, 0.2);
+          border: 1px solid rgba(195, 50, 50, 0.333);
+          color: #ffffff;
+          &:hover {
+            background-color: rgba(136, 0, 0, 0.8);
+          }
+        }
+      }
+    }
+  }
+}

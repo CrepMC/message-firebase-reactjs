@@ -1,0 +1,165 @@
+.chat {
+  flex: 2;
+  padding: 12px;
+  border-right: 1px solid var(--border-color);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-color);
+
+  .info {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+
+    img {
+      width: 60px;
+      border-radius: 50%;
+    }
+
+    .texts {
+      span {
+        font-weight: 600;
+      }
+      p {
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.8);
+      }
+    }
+  }
+
+  .icons {
+    display: flex;
+    gap: 12px;
+
+    img {
+      width: 20px;
+      object-fit: contain;
+      cursor: pointer;
+    }
+  }
+}
+
+.center {
+  /* display: flex; */
+  flex: 1;
+  /* background-color: #fff; */
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+
+  .message {
+    display: flex;
+    gap: 8px;
+    max-width: 75%;
+    margin-bottom: 32px;
+
+    &.own {
+      margin-left: auto;
+
+      .texts {
+        p {
+          background-color: rgba(0, 132, 132, 0.75);
+        }
+      }
+    }
+
+    img {
+      width: 32px;
+      height: 32px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    .texts {
+      img {
+        width: 100%;
+        height: auto;
+        max-height: 300px;
+        border-radius: 8px;
+        margin-bottom: 4px;
+        object-position: center;
+      }
+
+      p {
+        padding: 12px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        margin-bottom: 8px;
+      }
+
+      span {
+        color: rgba(255, 255, 255, 0.6);
+      }
+    }
+  }
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .icons {
+    display: flex;
+    gap: 12px;
+    img {
+      width: 20px;
+      object-fit: contain;
+      cursor: pointer;
+    }
+  }
+  .messageBox {
+    display: flex;
+    flex: 1;
+    gap: 12px;
+    padding: 0 18px;
+
+    input {
+      flex: 1;
+      padding: 12px;
+      border: none;
+      outline: none;
+      background-color: rgba(0, 0, 0, 0.4);
+      color: #fff;
+      font-size: 14px;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+    }
+
+    img {
+      width: 20px;
+      object-fit: contain;
+      cursor: pointer;
+    }
+  }
+  #sendBtn {
+    padding: 8px 12px;
+    background-color: rgb(0, 128, 79);
+    color: #fff;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.1s;
+  }
+
+  #sendBtn:hover {
+    transform: translateY(-2px);
+  }
+}
+
+.emojiPopup {
+  position: fixed !important;
+  bottom: 40px;
+  right: 28px;
+  z-index: 999;
+}
